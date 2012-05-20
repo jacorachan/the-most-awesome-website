@@ -1,0 +1,81 @@
+<div class="container-fluid">
+	
+	<section id="congratulations">
+		<div class="well">
+			<h2>Congratulations! You can start using our Awesome Website!</h2>
+			<p>Now you can start using The Most Awesome Website. You can start exploring the things you can do here:</p>
+		</div>
+	</section>
+	
+	<section id="settings-updated">
+		<div class="alert alert-success">
+		        <button data-dismiss="alert" class="close">×</button>
+		        <strong>Well done!</strong> You have updated your settings.
+		</div>		
+	</section>
+
+	<!--
+		Loged home content
+		====================== ================================
+	-->
+	<section id="sign-up-home">
+		<div class="row">
+			<!--
+				Left box
+				====================== ================================
+			-->					
+			<div class="span9">
+				<div class="well">
+					<ul>
+						<li>
+							<i class="icon-fire"></i> <stong>This is some Awesome stuff</strong>
+						</li>
+						<li>
+							<i class="icon-tint"></i> <stong>Another cool feature!</strong>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--
+				Right box
+				====================== ================================
+			-->					
+			<div class="span6">
+				<div class="hero-unit">
+					<h1>Awesome <em>/'aw-suhm/</em></h1>
+					<ol>
+						<li>inspiring awe: an awesome sight.</li>
+						<li>showing or characterized by awe.</li>
+						<li>Slang . very impressive: That new white convertible is totally awesome.</li>
+					</ol>
+				</div>
+			</div>
+		</div>			
+	</section>
+
+	
+</div><!-- /container -->
+ 
+  
+<script type="text/javascript">
+    $(document).ready(function() {
+		//Add home active class
+		$('#menu-home').addClass('active');
+
+		//Load signed in
+		signedInLoad();
+		
+		//disable home link
+		$('.homeLink').on('click', function(){
+			logedHomeLoad();
+			return false;
+		});
+		
+		if(SETTINGS_UPDATED){
+			$('#settings-updated').show();
+		} else {
+			$('#congratulations').show();
+		}
+		
+    });			
+</script>

@@ -1,0 +1,230 @@
+﻿<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>TMAW prototype v1.0</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <div id="wrap">
+	<!--
+		Navigation bar
+		====================== ================================
+	-->
+	<header>
+		<div class="navbar">
+			<div class="navbar-inner">
+			  <div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</a>
+				<a class="brand homeLink" href="index.html">TMAW prototype <small>v1.0</small></a>
+				<div class="nav-collapse">
+				  <ul class="nav">
+					<li class="active" id="menu-home"><a class="homeLink" href="index.html">Home</a></li>
+					<li><a href="#">Some section</a></li>
+					<li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+					  <ul class="dropdown-menu">
+						<li><a href="#">Useless</a></li>
+						<li><a href="#">Some more usless link</a></li>
+						<li><a href="#">This is just a demo</a></li>
+						<li class="divider"></li>
+						<li class="nav-header">Secondary content</li>
+						<li><a href="#">Some more fake links</a></li>
+						<li><a href="#">Last link that doesn't work</a></li>
+					  </ul>
+					</li>
+				  </ul>
+				  <div class="header-login pull-right ttip">
+					Do you have an account? <br /><a href="#" rel="tooltip" data-placement="left" title="This link should point to a login form">Sign in</a>
+				  </div>
+				</div><!-- /.nav-collapse -->
+			  </div>
+			</div><!-- /navbar-inner -->
+		</div>
+	</header>
+	
+	<!--
+		Page content
+		====================== ================================
+	-->
+	<div id="pageContent" role="main">
+		<div class="loading" style="display:none"><p>Loading, please wait...</p></div>
+		<div class="container-fluid page-home">
+			
+			<!--
+				Caption
+				====================== ================================
+			-->
+			<section>
+			  <div class="hero-unit">
+				<h1>Awesome <em>/'aw-suhm/</em></h1>
+				<ol>
+					<li>inspiring awe: an awesome sight.</li>
+					<li>showing or characterized by awe.</li>
+					<li>Slang . very impressive: That new white convertible is totally awesome.</li>
+				</ol>
+			  </div>
+			</section>
+			
+			<!--
+				Sign up form
+				====================== ================================
+			-->
+			<section id="sign-up-home">
+				<div class="row">
+					<!--
+						Left box
+						====================== ================================
+					-->					
+					<div class="span9">
+						<h3>Do you want to use our service? <strong>Sign up here!</strong></h3>
+						<div class="sign-up-home-box">
+							<form method="get" id="form1" action="#" novalidate="novalidate" class="form-inline">
+								Enter your email: <input id="form_email" name="email" size="25"  class="required email span5 input-small" placeholder="Email address (*)">
+								<button type="submit" id="form1submit" class="btn">Sign up!</button>
+							</form>
+							<p class="email-is-safe">
+								<small>* Your email is safe with us; we promise that we won't let anyone know it, sell it, or abuse it in any way. Promise!</small>
+							</p>
+						</div>
+						<p class="tos-home-login ttip">
+							By clicking the button below, you agree to the <a href="#" rel="tooltip" title="This link should do something usefull, but not in a prototype">Terms of Service </a> and <a href="#" rel="tooltip" title="This link should do something usefull, but not in a prototype">Privacy policy</a>
+						</p>
+					</div>
+					<!--
+						Right box
+						====================== ================================
+					-->					
+					<div class="span6">
+						<h3>... or you can log in with your account. Just one click!!</h3>
+						<p>
+							Do you have a Facebook, Twitter or Google account? You can use your account with us!
+						</p>
+						<div id="oauth" class="modal hide fade in" style="display: none; ">
+							<div class="modal-header">
+								<a class="close" data-dismiss="modal">×</a>
+								<h3>On the real world this will be your Google/Twitter/Facebook login page</h3>
+							</div>
+							<div class="modal-body">
+								<section>
+								  <div class="hero-unit" style="margin:0 auto;">
+									<img src="img/fc-login.png" />
+								  </div>
+								</section>       
+							</div>
+							<div class="modal-footer">
+								<!--<a href="#" class="btn btn-success">Call to action</a>-->
+								You are suposed to fill your credentials, but for now we just <a href="#" class="btn" data-dismiss="modal">Continue</a>
+							</div>
+						</div>
+						<a data-toggle="modal" href="#oauth"><img src="img/fc-tw-go_login_map.png" /></a>
+						
+						
+					</div>
+				</div>			
+			</section>
+		</div><!-- /container -->
+	</div><!-- /container -->
+  </div>
+
+ 
+	<!--
+		Footer
+		====================== ================================
+	-->					
+	<footer>
+		<div class="container-fluid ttip">
+			<a href="#" data-placement="right" class="first" rel="tooltip" title="This link should do something usefull, but not in a prototype">Terms of Service</a> | <a href="#" rel="tooltip" title="This link should do something usefull, but not in a prototype">Privacy</a> | <a href="#" rel="tooltip"title="This link should do something usefull, but not in a prototype">Security</a><br />
+			<strong>Copyleft 2012, No rights reserved, only some "lefts"...</strong>
+		</div><!-- /container -->
+	</footer>
+
+
+	<!--
+		All Javascript at bottom
+		====================== ================================
+	-->					
+	<script src="js/libs/jquery-1.7.1.min.js"></script>
+
+  <script src="js/plugins.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/script.js"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+		
+		//Form validation
+		$("#form1").validate({
+			errorPlacement: function(error, element) {
+				error.appendTo( element.parent() );
+			},		
+			submitHandler: function(form) {
+				$("#form1submit").attr('disabled', 'disabled').text("Sending...");
+				emailSentLoad();
+				return false;
+			}
+		});
+		
+		//This will load the file "email-sent.html"
+		function emailSentLoad(){
+			//Remove home active
+			$('#menu-home').removeClass('active');
+			
+			//We update the Login info
+			$('#pageContent').off().fadeOut('fast',emailSentAjaxLoad());
+			
+			//Load signed in panel on top
+			function emailSentAjaxLoad(){
+				//Put the spinner!
+				//<div class="loading"><p>Loading, please wait...</p></div>
+				
+				//Ajax call
+				TMAWajax({
+					url: "include/email-sent.html", 
+					success: function(data) {
+						$('.loading')
+							.stop()
+							.activity(false)
+							.hide()
+							.promise()
+							.done(ajaxLoaded(data));
+					}
+				});
+				
+				//Load the content into the DOM
+				function ajaxLoaded(data){
+					$('#pageContent').fadeIn('slow').html(data);
+				}
+			}
+		};
+		
+		//Modal event listener
+		//signedInLoad is in script.js
+		$('#oauth').on('hidden', function(){
+			//Remove home active
+			$('#menu-home').removeClass('active');
+
+			logedHomeLoad();
+		});
+
+		
+    });			
+  </script>
+
+</body>
+</html>

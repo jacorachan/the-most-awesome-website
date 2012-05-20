@@ -1,0 +1,52 @@
+<div class="container-fluid">
+	
+	<section>
+		<div class="well">
+			<h2>Thanks for sign up with us!</h2>
+			<p>You've just been sent an email that contains a confirmation link. Please check your email and click the confirmation link.</p>
+			<p>If you don't see that email in your email inbox shortly, click the  back button in your browser and fill out the form again to have another  copy of it sent to you.</p>
+		</div>
+		<p>
+			As this is just a demo, you are not going to recieve any email. So to proceed follow this link <a href="#" class="btn btn-primary" id="validateEmail">Validate email address</a>
+		</p>
+	</section>
+	
+</div><!-- /container -->
+ 
+  
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#validateEmail').on("click", function(){createPasswordLoad()});
+
+		//This will load the file "create-password.html"
+		function createPasswordLoad(){
+			//We update the Login info
+			$('#pageContent').off().fadeOut('fast',emailSentAjaxLoad());
+			
+			//Load signed in panel on top
+			function emailSentAjaxLoad(){
+				//Put the spinner!
+				//<div class="loading"><p>Loading, please wait...</p></div>
+				
+				//Ajax call
+				TMAWajax({
+					url: "include/create-password.html", 
+					success: function(data) {
+						$('.loading')
+							.stop()
+							.activity(false)
+							.hide()
+							.promise()
+							.done(ajaxLoaded(data));
+					}
+				});
+				
+				//Load the content into the DOM
+				function ajaxLoaded(data){
+					$('#pageContent').fadeIn('slow').html(data);
+				}
+			}
+		};
+
+    });			
+</script>

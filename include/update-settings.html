@@ -1,0 +1,92 @@
+<div class="container-fluid">
+	
+	<section>
+		<form method="get" id="settingsForm" action="#" novalidate="novalidate" class="form-horizontal">
+		  <fieldset>
+		    <legend>Account settings</legend>
+		    <div class="control-group">
+		      <label class="control-label" for="input01">Your email address</label>
+			  <div class="controls">
+			  	  <span class="input-xlarge uneditable-input">youremail@address.com</span>
+				  <p class="help-block">You cannot change it, it's your account login name</p>
+			  </div>		      
+		    </div>
+		    <div class="control-group">
+		      <div class="controls ttip">
+				<a href="#" id="changePasswordLink" rel="tooltip" title="This will not be shown if the user has loged-in with FB, G+ or TW">
+					Change current password
+				</a>
+			  </div>
+			</div>
+		    <div class="control-group password">
+		      <label class="control-label input-xlarge" for="input01">New password</label>
+		      <div class="controls">
+		        <input type="password" placeholder="Password" class="input-xlarge required">
+		        <p class="help-block"></p>
+		      </div>
+		    </div>
+		    <div class="control-group password">
+		      <label class="control-label input-xlarge" for="input01">Repeat password</label>
+		      <div class="controls">
+		        <input type="password" placeholder="Password" class="input-xlarge required">
+		        <p class="help-block"></p>
+		      </div>
+		    </div>
+		    <div class="control-group">
+		      <label class="control-label input-xlarge" for="name">First name</label>
+		      <div class="controls">
+		        <input type="text" placeholder="Name" id="name" name="name" class="input-xlarge required">
+		        <p class="help-block">Your real name</p>
+		      </div>
+		    </div>
+		    <div class="control-group">
+		      <label class="control-label input-xlarge" for="lastname">Last name</label>
+		      <div class="controls">
+		        <input type="text" placeholder="Last Name" id="lastname" name="lastname" class="input-xlarge required">
+		        <p class="help-block">Your real last name</p>
+		      </div>
+		    </div>
+		    <div class="control-group">
+		      <label class="control-label input-xlarge" for="phone">Mobile phone</label>
+		      <div class="controls">
+		        <input type="text" placeholder="phone" id="phone" name="phone" class="input-xlarge number">
+		        <p class="help-block">Enter your mobile phone number</p>
+		      </div>
+		    </div>
+		  </fieldset>
+		  <div class="form-actions">
+		      <button class="btn btn-primary" id="settingsFormsubmit" type="submit">Save changes</button>
+		      <a href="index.html">Cancel</a>
+		  </div>		
+		</form>
+	</section>
+	
+</div><!-- /container -->
+ 
+  
+<script type="text/javascript">
+    $(document).ready(function() {
+		//Remove home active
+		$('#menu-home').removeClass('active');
+
+		//Form validation
+		$("#settingsForm").validate({
+			errorPlacement: function(error, element) {
+				error.appendTo( element.parent() );
+			},		
+			submitHandler: function(form) {
+				$("#settingsFormsubmit").attr('disabled', 'disabled').text("Sending...");
+				SETTINGS_UPDATED = true;
+				console.log('Submit')
+				logedHomeLoad();
+				return false;
+			}
+		});
+
+		$('#changePasswordLink').on('click',function(){
+			$(this).slideToggle('slow');
+			$('#settingsForm').find('.password').slideToggle('slow');
+		})
+		   
+    });			
+</script>
