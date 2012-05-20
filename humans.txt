@@ -1,0 +1,18 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Jose Antonio Corachán
+  Front-end developer
+  Alicante (Spain)
+
+/* THANKS */
+  Twitter Bootstrap
+  Paul Irish and it's fantastic Boilerplate
+  JQuery team
+  All web developer comunity!!
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery, Twitter Bootstrap

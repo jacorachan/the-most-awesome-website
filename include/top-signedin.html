@@ -1,0 +1,59 @@
+Welcome <em>sample@mail.com</em> <br>
+<a href="#" class="settings">Settings</a> | <a href="index.html">Sign out</a>
+<div class="update-personal-details" style="display:none">
+	<p>Please, take a minute to update your personal information, that way you'll be able to use all of our services</p>
+	<p>You can do it later if you want, if you close this message it will appear again tomorrow as a reminder.</p>
+	<p><a href="#" class="settings btn">Update</a> | <a href="#">Close</a></p>
+</div>
+  
+<script type="text/javascript">
+    $(document).ready(function() {
+		//Go here only if settings has not been updated
+		if (!SETTINGS_UPDATED){
+			$(".update-personal-details").delay(2000).fadeIn('slow');
+			$(".settings").delay(1800).highlight({
+				color: [255, 252, 195, 1],
+				duration: 500,
+				quality: 20,
+				wait: 800
+			});
+		};
+
+		//Modal event listener
+		$('.settings').on('click', function(){
+			updateSettingsLoad();
+		});
+
+		//This will load the file "email-sent.html"
+		function updateSettingsLoad(){
+			//We update the Login info
+			$('#pageContent').off().fadeOut('fast',updateSettingsAjaxLoad());
+			
+			//Load signed in panel on top
+			function updateSettingsAjaxLoad(){
+				//Put the spinner!
+				//<div class="loading"><p>Loading, please wait...</p></div>
+				
+				//Ajax call
+				TMAWajax({
+					url: "include/update-settings.html", 
+					success: function(data) {
+						$('.loading')
+							.stop()
+							.activity(false)
+							.hide()
+							.promise()
+							.done(ajaxLoaded(data));
+					}
+				});
+				
+				//Load the content into the DOM
+				function ajaxLoaded(data){
+					$('#pageContent').fadeIn('slow').html(data);
+					$(".update-personal-details").delay(200).fadeOut('slow');
+				}
+			}
+		};		
+		
+    });			
+</script>
