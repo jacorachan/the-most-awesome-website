@@ -20,20 +20,17 @@ Even this "live" feedback and usability tests are necesary, the aim of this prot
 
 ## Project information
 
-* Source: 
-* Web: 
-* Docs: 
-* Twitter: 
-
+* Source: https://github.com/jacorachan/the-most-awesome-website
+* Web: http://jacorachan.github.com/the-most-awesome-website/
+* Docs: This file :o)
 
 ## License
+
+The Unlicense (aka: public domain)
 
 ### Major components:
 
 * jQuery: MIT/GPL license
 * Modernizr: MIT/BSD license
 * Normalize.css: Public Domain
-
-### Everything else:
-
-The Unlicense (aka: public domain)
+* Bootstrap from Twitter: Apache License v2.0
